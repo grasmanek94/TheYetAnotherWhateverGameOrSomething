@@ -9,25 +9,12 @@ int main()
 {
 	client = new NetworkClient();
 
-	if (client->GetInitCode())
+	if (	client->GetInitCode() 
+		||	!client->Create()
+		||	!client->Good()
+		||	!client->Connect("127.0.0.1", 0xBEEF))
 	{
 		std::cout << "An error occurred while trying to create an ENet object." << std::endl;
-		exit(EXIT_FAILURE);
-	}
-
-	client->Create();
-
-	if (!client->Good())
-	{
-		std::cout << "An error occurred while trying to create an ENet object." << std::endl;
-		exit(EXIT_FAILURE);
-	}
-
-	ENetPeer *peer = client->Connect("127.0.0.1", 0xBEEF);
-
-	if (peer == NULL)
-	{
-		std::cout << "No available peers for initiating an ENet connection." << std::endl;
 		exit(EXIT_FAILURE);
 	}
 

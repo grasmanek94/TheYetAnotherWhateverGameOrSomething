@@ -9,15 +9,9 @@ int main()
 {
 	server = new NetworkServer();
 
-	if (server->GetInitCode())
-	{
-		std::cout << "An error occurred while trying to create an ENet object." << std::endl;
-		exit(EXIT_FAILURE);
-	}
-
-	server->Create(1024);
-
-	if (!server->Good())
+	if (	server->GetInitCode() 
+		||	!server->Create(1024) 
+		||	!server->Good())
 	{
 		std::cout << "An error occurred while trying to create an ENet object." << std::endl;
 		exit(EXIT_FAILURE);
