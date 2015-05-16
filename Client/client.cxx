@@ -2,8 +2,19 @@
 #include <chrono>
 #include <thread>
 #include <enet/enetpp.hxx>
+#include <KeyboardManager.hxx>
 
 NetworkClient* client;
+
+
+void OnKeyStateChange(bool pressed, unsigned char key)
+{
+	char dest[16];
+	std::string toSend(std::string(pressed ? "DOWN" : "UP") + ": 0x" + itoa(key, dest, 16));
+	client->Send(toSend.c_str(), toSend.length()+1);
+}
+
+KeyboardManager kbmgr(OnKeyStateChange);
 
 int main()
 {
@@ -20,6 +31,7 @@ int main()
 
 	while (true)
 	{
+		kbmgr.CheckKeys();
 		if (client->Pull())
 		{
 			ENetEvent event = client->Event();
@@ -33,11 +45,7 @@ int main()
 				event.peer->data = "Client information";
 				break;
 			case ENET_EVENT_TYPE_RECEIVE:
-				printf("A packet of length %u containing %s was received from %s on channel %u.\n",
-					event.packet->dataLength,
-					event.packet->data,
-					event.peer->data,
-					event.channelID);
+				printf("%s\n", event.packet->data);
 				/* Clean up the packet now that we're done using it. */
 				enet_packet_destroy(event.packet);
 

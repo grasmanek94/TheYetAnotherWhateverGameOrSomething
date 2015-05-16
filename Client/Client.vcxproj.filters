@@ -1,79 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="..\enet\host.c">
-      <Filter>networking\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\enet\list.c">
-      <Filter>networking\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\enet\packet.c">
-      <Filter>networking\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\enet\peer.c">
-      <Filter>networking\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\enet\protocol.c">
-      <Filter>networking\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\enet\unix.c">
-      <Filter>networking\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\enet\win32.c">
-      <Filter>networking\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\enet\callbacks.c">
-      <Filter>networking\source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\enet\compress.c">
-      <Filter>networking\source</Filter>
-    </ClCompile>
     <ClCompile Include="client.cxx" />
-    <ClCompile Include="..\enet\enetpp.cxx">
-      <Filter>networking\source</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{57a58d99-42f2-436c-8bb4-e1cfe8b5d624}</UniqueIdentifier>
+    </Filter>
     <Filter Include="networking">
-      <UniqueIdentifier>{5d2e4983-496c-4176-b039-ac8cca063582}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="networking\source">
-      <UniqueIdentifier>{bd05dcbe-a016-4319-bd14-ff6d0b6cc078}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="networking\header">
-      <UniqueIdentifier>{98589efc-7693-458d-934a-2d2f738f7442}</UniqueIdentifier>
+      <UniqueIdentifier>{356b61ae-1f2b-4e40-a7ca-98e9dc7afd13}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\enet\include\enet\list.h">
-      <Filter>networking\header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\enet\include\enet\protocol.h">
-      <Filter>networking\header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\enet\include\enet\time.h">
-      <Filter>networking\header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\enet\include\enet\types.h">
-      <Filter>networking\header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\enet\include\enet\unix.h">
-      <Filter>networking\header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\enet\include\enet\utility.h">
-      <Filter>networking\header</Filter>
-    </ClInclude>
-    <ClInclude Include="..\enet\include\enet\win32.h">
-      <Filter>networking\header</Filter>
+    <ClInclude Include="..\common\KeyboardManager.hxx">
+      <Filter>common</Filter>
     </ClInclude>
     <ClInclude Include="..\enet\include\enet\callbacks.h">
-      <Filter>networking\header</Filter>
+      <Filter>networking</Filter>
     </ClInclude>
     <ClInclude Include="..\enet\include\enet\enet.h">
-      <Filter>networking\header</Filter>
+      <Filter>networking</Filter>
     </ClInclude>
     <ClInclude Include="..\enet\include\enet\enetpp.hxx">
-      <Filter>networking\header</Filter>
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\list.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\protocol.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\time.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\types.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\unix.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\utility.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\win32.h">
+      <Filter>networking</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
