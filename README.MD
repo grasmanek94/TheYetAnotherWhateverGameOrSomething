@@ -1,1 +1,1 @@
-This is just a cross-compatible (unix/windows) boilerplate project for creating ENET networking applications.
+Game
