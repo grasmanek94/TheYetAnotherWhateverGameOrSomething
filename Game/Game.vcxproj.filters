@@ -16,6 +16,12 @@
     <Filter Include="Assets">
       <UniqueIdentifier>{22117168-c630-4ce0-aa45-a94980e7ccf0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{e0f94210-f5b2-4b68-ad85-ac94cb8fa5c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="networking">
+      <UniqueIdentifier>{49bddc57-a645-4797-afdd-3d414c2aeea2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -26,6 +32,39 @@
     </ClInclude>
     <ClInclude Include="StepTimer.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\KeyboardManager.hxx">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\callbacks.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\enet.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\enetpp.hxx">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\list.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\protocol.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\time.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\types.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\unix.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\utility.h">
+      <Filter>networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\enet\include\enet\win32.h">
+      <Filter>networking</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

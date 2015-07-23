@@ -69,15 +69,23 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\BUILD\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>..\BUILD\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug 2015|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\BUILD\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>..\BUILD\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\BUILD\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>..\BUILD\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release 2015|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\BUILD\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>..\BUILD\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

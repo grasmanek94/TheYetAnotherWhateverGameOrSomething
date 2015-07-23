@@ -126,9 +126,13 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\BUILD\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>..\BUILD\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug 2015|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\BUILD\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>..\BUILD\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -138,9 +142,13 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\BUILD\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>..\BUILD\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release 2015|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\BUILD\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>..\BUILD\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -279,6 +287,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\common\KeyboardManager.hxx" />
+    <ClInclude Include="..\enet\include\enet\callbacks.h" />
+    <ClInclude Include="..\enet\include\enet\enet.h" />
+    <ClInclude Include="..\enet\include\enet\enetpp.hxx" />
+    <ClInclude Include="..\enet\include\enet\list.h" />
+    <ClInclude Include="..\enet\include\enet\protocol.h" />
+    <ClInclude Include="..\enet\include\enet\time.h" />
+    <ClInclude Include="..\enet\include\enet\types.h" />
+    <ClInclude Include="..\enet\include\enet\unix.h" />
+    <ClInclude Include="..\enet\include\enet\utility.h" />
+    <ClInclude Include="..\enet\include\enet\win32.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="StepTimer.h" />
