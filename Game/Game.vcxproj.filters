@@ -94,7 +94,6 @@
     </Manifest>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="myfile.spritefont">
       <Filter>Assets</Filter>
     </None>

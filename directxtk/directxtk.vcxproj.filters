@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="source">
+      <UniqueIdentifier>{d8ac63ee-1d71-4e05-b62e-774c1a03ebf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{c868d30f-5a26-4bf8-a0e2-1aad8aa03e36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Shaders">
+      <UniqueIdentifier>{55a2b160-0bc5-4615-8c82-33a954f11105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\Audio">
+      <UniqueIdentifier>{31541144-268e-46be-a2c9-5211f3e4fef8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\SpriteBatch.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\SpriteFont.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\VertexTypes.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\WICTextureLoader.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AlphaTestEffect.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\BasicEffect.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\BinaryReader.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CommonStates.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DDSTextureLoader.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DGSLEffect.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DGSLEffectFactory.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\DualTextureEffect.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\EffectCommon.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\EffectFactory.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\EnvironmentMapEffect.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GamePad.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GeometricPrimitive.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Keyboard.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Model.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ModelLoadCMO.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ModelLoadSDKMESH.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ModelLoadVBO.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Mouse.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\pch.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\PrimitiveBatch.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ScreenGrab.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\SimpleMath.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\SkinnedEffect.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Audio\WaveBank.cpp">
+      <Filter>source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Audio\WaveBankReader.cpp">
+      <Filter>source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Audio\WAVFileReader.cpp">
+      <Filter>source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Audio\AudioEngine.cpp">
+      <Filter>source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Audio\DynamicSoundEffectInstance.cpp">
+      <Filter>source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Audio\SoundCommon.cpp">
+      <Filter>source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Audio\SoundEffect.cpp">
+      <Filter>source\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Audio\SoundEffectInstance.cpp">
+      <Filter>source\Audio</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source\TeapotData.inc">
+      <Filter>source</Filter>
+    </None>
+    <None Include="include\SimpleMath.inl">
+      <Filter>include</Filter>
+    </None>
+    <None Include="source\Shaders\CompileShaders.cmd">
+      <Filter>source\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\AlignedNew.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Bezier.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\BinaryReader.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ConstantBuffer.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\dds.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\DemandCreate.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\EffectCommon.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pch.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\PlatformHelpers.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\SharedResourcePool.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GamePad.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GeometricPrimitive.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Keyboard.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Model.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Mouse.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PrimitiveBatch.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ScreenGrab.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SimpleMath.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SpriteBatch.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SpriteFont.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VertexTypes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\WICTextureLoader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Audio.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CommonStates.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DDSTextureLoader.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\DirectXHelpers.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Effects.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Audio\WaveBankReader.h">
+      <Filter>source\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Audio\WAVFileReader.h">
+      <Filter>source\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Audio\SoundCommon.h">
+      <Filter>source\Audio</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

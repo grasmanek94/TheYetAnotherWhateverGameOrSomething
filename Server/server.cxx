@@ -9,7 +9,10 @@ NetworkServer* server;
 void OnKeyStateChange(bool pressed, unsigned char key)
 {
 	char dest[16];
-	std::string toSend(std::string(pressed ? "DOWN" : "UP") + ": 0x" + itoa(key, dest, 16));
+	#ifndef WIN32
+	#define _itoa itoa
+	#endif
+	std::string toSend(std::string(pressed ? "DOWN" : "UP") + ": 0x" + _itoa(key, dest, 16));
 	server->Broadcast(toSend.c_str(), toSend.length() + 1);
 }
 
