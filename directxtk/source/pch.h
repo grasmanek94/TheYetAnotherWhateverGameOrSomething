@@ -47,8 +47,6 @@
 #include <DirectXPackedVector.h>
 #include <DirectXCollision.h>
 
-#include <D2d1.h>
-
 #include <algorithm>
 #include <array>
 #include <exception>
@@ -64,6 +62,7 @@
 #pragma warning(disable : 4005)
 #include <stdint.h>
 #include <intsafe.h>
+#include <D2d1.h>
 #pragma warning(pop)
 
 #include <wrl.h>

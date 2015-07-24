@@ -9,10 +9,11 @@ rem Copyright (c) Microsoft Corporation. All rights reserved.
 setlocal
 set error=0
 
-SET PATH=%PATH%;%DXSDK_DIR%\Utilities\bin\x64\
+SET PATH=%PATH%;%DXSDK_DIR%\Utilities\bin\x86\
 
 cd /d "%~dp0"
 mkdir Compiled
+mkdir Compiled\x86
 
 if %1.==xbox. goto continuexbox
 if %1.==. goto continue
@@ -20,7 +21,7 @@ echo usage: CompileShaders [xbox]
 exit /b
 
 :continuexbox
-if not exist "%DXSDK_DIR%\Utilities\bin\x64\FXC.exe" goto needxdk
+if not exist "%DXSDK_DIR%\Utilities\bin\x86\FXC.exe" goto needxdk
 
 :continue
 
@@ -144,28 +145,28 @@ endlocal
 exit /b
 
 :CompileShader
-set fxc=fxc /nologo %1.fx /T%2_4_0_level_9_1 /Zpc /Qstrip_reflect /Qstrip_debug /E%3 /FhCompiled\%1_%3.inc /Vn%1_%3
+set fxc=fxc /nologo %1.fx /T%2_4_0_level_9_1 /Zpc /Qstrip_reflect /Qstrip_debug /E%3 /FhCompiled\x86\%1_%3.inc /Vn%1_%3
 echo.
 echo %fxc%
 %fxc% || set error=1
 exit /b
 
 :CompileShaderHLSL
-set fxc=fxc /nologo %1.hlsl /T%2_4_0_level_9_1 /Zpc /Qstrip_reflect /Qstrip_debug /E%3 /FhCompiled\%1_%3.inc /Vn%1_%3
+set fxc=fxc /nologo %1.hlsl /T%2_4_0_level_9_1 /Zpc /Qstrip_reflect /Qstrip_debug /E%3 /FhCompiled\x86\%1_%3.inc /Vn%1_%3
 echo.
 echo %fxc%
 %fxc% || set error=1
 exit /b
 
 :CompileShaderxbox
-set fxc="%DXSDK_DIR%\Utilities\bin\x64\FXC.exe" /nologo %1.fx /T%2_5_0 /Zpc /Qstrip_reflect /Qstrip_debug /D__XBOX_DISABLE_SHADER_NAME_EMPLACEMENT /E%3 /FhCompiled\XboxOne%1_%3.inc /Vn%1_%3
+set fxc="%DXSDK_DIR%\Utilities\bin\x86\FXC.exe" /nologo %1.fx /T%2_5_0 /Zpc /Qstrip_reflect /Qstrip_debug /D__XBOX_DISABLE_SHADER_NAME_EMPLACEMENT /E%3 /FhCompiled\x86\XboxOne%1_%3.inc /Vn%1_%3
 echo.
 echo %fxc%
 %fxc% || set error=1
 exit /b
 
 :CompileShaderHLSLxbox
-set fxc="%DXSDK_DIR%\Utilities\bin\x64\FXC.exe" /nologo %1.hlsl /T%2_5_0 /Zpc /Qstrip_reflect /Qstrip_debug /D__XBOX_DISABLE_SHADER_NAME_EMPLACEMENT /E%3 /FhCompiled\XboxOne%1_%3.inc /Vn%1_%3
+set fxc="%DXSDK_DIR%\Utilities\bin\x86\FXC.exe" /nologo %1.hlsl /T%2_5_0 /Zpc /Qstrip_reflect /Qstrip_debug /D__XBOX_DISABLE_SHADER_NAME_EMPLACEMENT /E%3 /FhCompiled\x86\XboxOne%1_%3.inc /Vn%1_%3
 echo.
 echo %fxc%
 %fxc% || set error=1

@@ -122,7 +122,7 @@
     <ProjectGuid>{B5868B25-8D70-4076-B271-E4E0F3BD4D99}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>directxtk</RootNamespace>
-    <TargetPlatformVersion>6.0</TargetPlatformVersion>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -208,36 +208,36 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug 2015|Win32'">
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release 2015|Win32'">
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug 2015|x64'">
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release 2015|x64'">
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

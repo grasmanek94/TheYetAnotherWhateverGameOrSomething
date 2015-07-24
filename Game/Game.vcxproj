@@ -123,43 +123,43 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug 2015|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug 2015|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release 2015|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release 2015|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>..\BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
+    <OutDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\TMP\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -175,6 +175,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;..\BUILD\$(Platform)\commonlib\$(Configuration)\commonlib.lib;..\BUILD\$(Platform)\directxtk\$(Configuration)\directxtk.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>CopyAssets.bat $(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug 2015|Win32'">
     <ClCompile>
@@ -190,6 +193,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;..\BUILD\$(Platform)\commonlib\$(Configuration)\commonlib.lib;..\BUILD\$(Platform)\directxtk\$(Configuration)\directxtk.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>CopyAssets.bat $(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -205,6 +211,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;..\BUILD\$(Platform)\commonlib\$(Configuration)\commonlib.lib;..\BUILD\$(Platform)\directxtk\$(Configuration)\directxtk.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>CopyAssets.bat $(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug 2015|x64'">
     <ClCompile>
@@ -220,6 +229,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;..\BUILD\$(Platform)\commonlib\$(Configuration)\commonlib.lib;..\BUILD\$(Platform)\directxtk\$(Configuration)\directxtk.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>CopyAssets.bat $(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -239,6 +251,9 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;..\BUILD\$(Platform)\commonlib\$(Configuration)\commonlib.lib;..\BUILD\$(Platform)\directxtk\$(Configuration)\directxtk.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>CopyAssets.bat $(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release 2015|Win32'">
     <ClCompile>
@@ -258,6 +273,9 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;..\BUILD\$(Platform)\commonlib\$(Configuration)\commonlib.lib;..\BUILD\$(Platform)\directxtk\$(Configuration)\directxtk.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>CopyAssets.bat $(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -277,6 +295,9 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;..\BUILD\$(Platform)\commonlib\$(Configuration)\commonlib.lib;..\BUILD\$(Platform)\directxtk\$(Configuration)\directxtk.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>CopyAssets.bat $(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release 2015|x64'">
     <ClCompile>
@@ -296,6 +317,9 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>d3d11.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;odbc32.lib;odbccp32.lib;..\BUILD\$(Platform)\commonlib\$(Configuration)\commonlib.lib;..\BUILD\$(Platform)\directxtk\$(Configuration)\directxtk.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>CopyAssets.bat $(SolutionDir)BUILD\$(Platform)\$(ProjectName)\$(Configuration)\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\common\KeyboardManager.hxx" />

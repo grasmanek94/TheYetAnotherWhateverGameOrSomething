@@ -11,6 +11,9 @@ set error=0
 
 SET PATH=%PATH%;%DXSDK_DIR%\Utilities\bin\x86\
 
+cd /d "%~dp0"
+mkdir Compiled
+
 if %1.==xbox. goto continuexbox
 if %1.==. goto continue
 echo usage: CompileShaders [xbox]

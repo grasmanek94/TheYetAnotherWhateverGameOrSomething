@@ -1,0 +1,1 @@
+xcopy "%~dp0myfile.spritefont" "%*myfile.spritefont*" /Y
