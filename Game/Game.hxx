@@ -4,9 +4,7 @@
 
 #pragma once
 
-#include "pch.h"
-#include "StepTimer.h"
-#include <enet/enetpp.hxx>
+#include "pch.hxx"
 
 using namespace DirectX;
 using namespace DirectX::SimpleMath;
@@ -81,4 +79,6 @@ private:
 
 	//Strings
 	wchar_t debugText[128];
+
+	std::unique_ptr<SpriteTest> staticSprites;
 };

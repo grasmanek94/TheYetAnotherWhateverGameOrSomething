@@ -2,8 +2,8 @@
 // Game.cpp -
 //
 
-#include "pch.h"
-#include "Game.h"
+#include "pch.hxx"
+#include "Game.hxx"
 
 using namespace DirectX;
 
@@ -26,12 +26,15 @@ void Game::Initialize(HWND window)
 
     CreateResources();
 
+	staticSprites = std::make_unique<SpriteTest>(m_d3dDevice.Get(),m_d3dContext.Get());
+
+	staticSprites->AddTexture(TextureData(L"Texture.dds",XMFLOAT2(50.0, 50.0), Colors::White));
     // TODO: Change the timer settings if you want something other than the default variable timestep mode.
     // e.g. for 60 FPS fixed timestep update logic, call:
-    /*
+    
     m_timer.SetFixedTimeStep(true);
-    m_timer.SetTargetElapsedSeconds(1.0 / 60);
-    */
+    m_timer.SetTargetElapsedSeconds(1.0 / 144);
+    
 
 	m_client.reset(new NetworkClient());
 
@@ -76,14 +79,14 @@ void Game::Update(DX::StepTimer const& timer)
 			event.peer->data = "Client information";
 			break;
 		case ENET_EVENT_TYPE_RECEIVE:
-			swprintf_s(debugText, L"%s\n", event.packet->data);
+			swprintf_s(debugText, L"%hs\n", event.packet->data);
 			/* Clean up the packet now that we're done using it. */
 			enet_packet_destroy(event.packet);
 		
 			break;
 		
 		case ENET_EVENT_TYPE_DISCONNECT:
-			swprintf_s(debugText, L"%s disconnected.\n", event.peer->data);
+			swprintf_s(debugText, L"%hs disconnected.\n", (char*)event.peer->data);
 			/* Reset the peer's client information. */
 			event.peer->data = NULL;
 			break;
@@ -101,6 +104,8 @@ void Game::Render()
     Clear();
 
     // TODO: Add your rendering code here
+
+	staticSprites->Draw();
 
 	m_spriteBatch->Begin();
 
@@ -129,7 +134,7 @@ void Game::Present()
     // The first argument instructs DXGI to block until VSync, putting the application
     // to sleep until the next VSync. This ensures we don't waste any cycles rendering
     // frames that will never be displayed to the screen.
-    HRESULT hr = m_swapChain->Present(1, 0);
+    HRESULT hr = m_swapChain->Present(0, 0);
 
     // If the device was reset we must completely reinitialize the renderer.
     if (hr == DXGI_ERROR_DEVICE_REMOVED || hr == DXGI_ERROR_DEVICE_RESET)

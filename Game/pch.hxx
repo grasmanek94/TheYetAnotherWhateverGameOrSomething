@@ -38,6 +38,12 @@
 #include "VertexTypes.h"
 #include "WICTextureLoader.h"
 
+using namespace DirectX;
+
+#include "SpriteTest.hxx"
+#include "StepTimer.hxx"
+#include <enet/enetpp.hxx>
+
 namespace DX
 {
     inline void ThrowIfFailed(HRESULT hr)

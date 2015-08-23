@@ -22,7 +22,7 @@ namespace DX
             m_framesThisSecond(0),
             m_qpcSecondCounter(0),
             m_isFixedTimeStep(false),
-            m_targetElapsedTicks(TicksPerSecond / 60)
+            m_targetElapsedTicks(TicksPerSecond / 144)
         {
             if (!QueryPerformanceFrequency(&m_qpcFrequency))
             {

@@ -1,1 +1,1 @@
-xcopy "%~dp0myfile.spritefont" "%*myfile.spritefont*" /Y
+(ROBOCOPY "%~dp0../Assets" "%*." /E /W:0 /R:1) ^& exit 0
